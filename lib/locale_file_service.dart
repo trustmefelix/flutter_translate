@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'constants.dart';
 
 class LocaleFileService {
-  static Future<Map<String?, String?>?> getLocaleFiles(List<String> locales, String? basePath) async {
+  static Future<Map<String, String>?> getLocaleFiles(List<String> locales, String? basePath) async {
     final List<String>? localizedFiles = await _getAllLocaleFiles(basePath);
 
     final Map<String, String> files = <String, String>{};
@@ -17,7 +17,7 @@ class LocaleFileService {
     return files;
   }
 
-  static Future<String?> getLocaleContent(String? file) async {
+  static Future<String> getLocaleContent(String? file) async {
     return await rootBundle.loadString(file!);
   }
 
