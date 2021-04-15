@@ -8,7 +8,7 @@ class LocaleFileService {
 
     final Map<String, String> files = <String, String>{};
 
-    for (final String? language in locales.toSet()) {
+    for (final String language in locales.toSet()) {
       final String file = _findLocaleFile(language, localizedFiles, basePath!)!;
 
       files[language] = file;
